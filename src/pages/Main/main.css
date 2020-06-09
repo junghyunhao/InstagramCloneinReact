@@ -1,0 +1,531 @@
+body {
+    background-color: #FAFAFA;
+  }
+  
+.header-container {
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+  }
+  
+  .nav-container {
+    width: 975px;
+    display: flex;
+    margin: 0 auto;
+    height: 54px;
+  }
+  
+  .left-nav {
+    width: 33.33333%;
+    height: 54px;
+    margin-left: 10px;
+  }
+  
+  .left-nav ul {
+    display: flex;
+    list-style: none;
+    padding-top: 13px;
+  }
+  
+  .left-nav ul li .insta-icon {
+    height: 29px;
+    margin-right: 10px;
+  }
+  
+  .left-nav ul li:first-child {
+    border-right: 1px solid black;
+  }
+  
+  .left-nav ul li .insta-logo {
+    height: 29px;
+    width: 103px;
+    margin-left: 10px;
+  }
+  
+  .search-bar {
+    width: 33.33333%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #search-bar-field {
+    background-color: #FAFAFA;
+    color: #A2A2A2;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    min-width: 125px;
+    width: 215px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .search-bar input::placeholder {
+    text-align: center;
+  }
+  
+  .right-nav {
+    width: 33.33333%;
+    height: 54px;
+    left: 0;
+  }
+  
+  .right-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 16px
+  }
+  
+  .right-nav ul li img {
+    width: 22px;
+    margin: 0 10px;
+  }
+  
+  main {
+    display: flex;
+    width: 907px;
+    margin: 120px auto;
+  }
+  
+  .feeds {
+    display: flex;
+    width: 614px;
+    margin-right: 28px;
+  }
+  
+  .article-main {
+    width: 614px;
+    border: 1px solid #DBDBDB;
+    background-color: white;
+  }
+  
+  .article-head {
+    height: 60px;
+    background-color: white;
+  }
+  
+  .article-head .ID-bar {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11.5px;
+  }
+  
+  .article-head .ID-bar .ID-on-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .ID-bar li a .profile {
+    width: 32px;
+    height: 33px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .ID-on-left .profile-photo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  li .name {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 16px;
+    padding-top: 5.195px;
+  }
+  
+  .three-dots {
+    height: 22px;
+  }
+  
+  .three-dots .dots {
+    width: 22px;
+    height: 22px;
+    margin: auto 0;
+  }
+  
+  .article-body {}
+  
+  .article-body .gyu {
+    width: 612.5px;
+  }
+  
+  .icon-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 614px;
+    height: 40px;
+    padding: 0 0 0 10px;
+  }
+  
+  button {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    text-align: center;
+    text-shadow: none;
+    border: none;
+    outline: none;
+  }
+  
+  
+  #heart-button {
+    background: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png") no-repeat;
+    background-size: 22px;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #comment-button {
+    background: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png") no-repeat;
+    background-size: 22px;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #share-button {
+    background: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png") no-repeat;
+    background-size: 22px;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #bookmark-button {
+    background: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png") no-repeat;
+    background-size: 22px;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .whole-comment-box {
+    width: 614px;
+  }
+  
+  .jojo-profile {
+    width: 18px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto 5px auto 0;
+  }
+  
+  .who-liked-this-post {
+    width: 582px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 18px;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+  
+  .who-liked-this-post p {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 2px 20px;
+    font-size: 14px;
+  }
+  
+  .first-comment p {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 2px 20px;
+    font-size: 14px;
+  }
+  
+  .second-comment #my-msg {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 2px 20px;
+    font-size: 14px;
+  }
+  
+  .new-comment {
+    padding: 0 20px 2px 20px;
+    font-size: 14px;
+  }
+  
+  .first-comment p a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  .second-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #heart-p-tag {
+    padding-right: 10px;
+  }
+  
+  #heart-box-in-comment {
+    background: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png") no-repeat;
+    background-size: 18px;
+    background-position: center;
+    opacity: 50%;
+    height: 18px;
+    width: 18px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .when-posted p {
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 2px 20px;
+    font-size: 14px;
+  }
+  
+  .write-comment {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #DBDBDB;
+    border-left: 0.4px solid #DBDBDB;
+    background-color: white;
+  }
+  
+  .comment-field {
+    height: 20px;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    resize: none;
+    color: #8E8E8E;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    outline: none;
+    margin-left: 15px;
+  }
+  
+  .click-to-post {
+    color: #B3DFFC;
+    border: none;
+    text-align: center;
+    text-shadow: none;
+    background-color: transparent;
+    margin-right: 15px;
+  }
+  
+  .main-right {
+    width: 293px;
+    height: 1000px;
+    position: fixed;
+    left: 1035px;
+  }
+  
+  .my-account {
+    display: flex;
+    flex-direction: row;
+    width: 293px;
+    height: 60px;
+    background-color: #FAFAFA;
+    padding-left: 5px;
+  }
+  
+  .my-account-img {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+  }
+  
+  .myname {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0 auto 10px;
+  }
+  
+  .my-name-link {
+    /* display:flex;
+      flex-direction: row; */
+  }
+  
+  .my-name-link a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .my-name-full {
+    color: #939393;
+    font-size: 12px;
+  }
+  
+  .story {
+    width: 293px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid #DBDBDB;
+    margin: 0 0 20px 0;
+  }
+  
+  .friends-story {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 19px;
+    width: 293px;
+    margin-top: 12px;
+    padding: 4px 16px;
+    margin-bottom: 6px;
+  }
+  
+  .recomm-for-you {
+    font-size: 14px;
+    line-height: 18px;
+    color: #8e8e8e;
+    font-weight: 600;
+  }
+  
+  .see-ALL {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .others-info {
+    padding: 8px 16px 8px 25px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .others-info-follow {
+    padding: 6px 16px 6px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .for-follow-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .img-photo-of-others {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #DC387C;
+  }
+  
+  .name-and-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 14px;
+    margin: auto 0 auto 10px;
+  }
+  
+  .name-in-bold {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .info-in-grey {
+    color: #8E8E8E;
+  }
+  
+  .recomm {
+    width: 293px;
+    height: 190px;
+    background-color: white;
+    border: 1px solid #DBDBDB;
+    margin: 20px 0 20px 0;
+  }
+  
+  .img-photo-of-others-wo-border {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .follow {
+    margin: auto 0;
+  }
+  
+  .others-info-follow .follow a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #0095f6;
+    font-weight: bold;
+  }
+  
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 100px;
+    background-color: #FAFAFA;
+  }
+  
+  .footer-contents ul {
+    list-style-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .footer-info nav ul {
+    line-height: 13px;
+    text-transform: none;
+    list-style: none;
+    margin-bottom: 3px;
+  }
+  
+  .footer-contents {
+    margin-bottom: 16px;
+    color: #c7c7c7;
+  }
+  
+  .footer-contents ul li a {
+    text-decoration: none;
+    color: #c7c7c7;
+    font-size: 11px;
+    line-height: 14px;
+  }
+  
+  .footer-contents ul li a::after {
+    content: '\00B7';
+    margin: 0 .25em 0 .25em;
+  }
+  
+  .footer-info span {
+    color: #c7c7c7;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 13px;
+  }
+  
