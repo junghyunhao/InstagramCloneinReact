@@ -55,7 +55,7 @@
     line-height: 18px;
   }
   
-  #login-form-submit {
+  .not-ready-to-submit {
     width: 300px;
     background-color: #B2DFFC;
     font-size: 15px;
@@ -68,6 +68,22 @@
     text-align: center;
     text-shadow: none;
   }
+
+  .ready-to-submit {
+    width: 300px;
+    background-color: #3B5998;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: none;
+  }
+
+  
   
   .linkContainer {
     display: flex;

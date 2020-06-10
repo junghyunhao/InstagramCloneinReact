@@ -2,6 +2,21 @@ import React, { Component } from "react";
 import '.././pages/Main/main.css';
 
 class Feed extends Component {
+    constructor() {
+        super();
+        
+        this.state = {
+          comment : "",
+          clicked : false
+        };
+    }
+      changeHandler = (e) => {
+          this.setState ( {comment : e.target.value })
+      }
+      clickHandler = () => {
+          this.setState({clicked : true})
+      }
+    
     render() {
         return (
             <>
@@ -52,8 +67,7 @@ class Feed extends Component {
 
                                 </section>
                                 <section className="new-comment">
-
-
+                                   <div>{this.state.clicked ? this.state.comment : ""}</div>
                                 </section>
 
                                 <section className="when-posted">
@@ -64,8 +78,8 @@ class Feed extends Component {
                         </div>
 
                         <div className="write-comment">
-                            <textarea className="comment-field" placeholder="댓글 달기..."></textarea>
-                            <button className="click-to-post" type="submit">게시</button>
+                            <textarea onChange = {this.changeHandler} className="comment-field" placeholder="댓글 달기..."></textarea>
+                            <button onClick = {this.clickHandler} className="click-to-post" type="submit">게시</button>
                         </div>
 
                     </article>
