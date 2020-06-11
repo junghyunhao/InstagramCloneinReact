@@ -1,23 +1,39 @@
-import React, { Component } from "react";
+import React from "react";
 import '.././pages/Main/main.css';
 
-class Feed extends Component {
+class Feed extends React.Component {
     constructor() {
-        super();
-        
+        super()
+
         this.state = {
-          comment : "",
-          clicked : false
-        };
+          comments : [],
+          comment : ""
+        }
+        // this.clickHandler=this.clickHandler.bind(this)
+
     }
-      changeHandler = (e) => {
-          this.setState ( {comment : e.target.value })
+      changeHandler = (e)  =>{
+        // e.preventDefault();
+
+          this.setState ({comment : e.target.value})  
+        //   if (e.keycode === 13) {
+        //     console.log("Dd")
+        } 
+    //   }
+
+      handleKeyPress = (e) => {
+        e.keyCode === 13 && this.clickHandler()
       }
-      clickHandler = () => {
-          this.setState({clicked : true})
+    
+      clickHandler = () =>  {
+        let comments = this.state.comments
+        let comment = this.state.comment
+        comments.push(comment)
+        this.setState({comments : comments})
       }
     
     render() {
+
         return (
             <>
                 <div className="feeds">
@@ -67,7 +83,9 @@ class Feed extends Component {
 
                                 </section>
                                 <section className="new-comment">
-                                   <div>{this.state.clicked ? this.state.comment : ""}</div>
+                                   {this.state.comments.map ((comment) => {
+                                       return (<p><b>joanne_jhk</b> {comment} </p>)})}
+                        
                                 </section>
 
                                 <section className="when-posted">
@@ -78,7 +96,7 @@ class Feed extends Component {
                         </div>
 
                         <div className="write-comment">
-                            <textarea onChange = {this.changeHandler} className="comment-field" placeholder="댓글 달기..."></textarea>
+                            <textarea onChange = {this.changeHandler} onKeyUp={this.handleKeyPress} className="comment-field" placeholder="댓글 달기..."></textarea>
                             <button onClick = {this.clickHandler} className="click-to-post" type="submit">게시</button>
                         </div>
 

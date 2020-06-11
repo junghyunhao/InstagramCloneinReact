@@ -27,13 +27,11 @@ class Login extends Component {
         })
       }
 
-
       clickHandler = e => {
         e.preventDefault();
         console.log("ID", this.state.IDInput)
         console.log("Password", this.state.passwordInput)
         // console.log(this.state.passwordInput.length&&this.state.IDInput.includes("@"))
-
         }
 
     render() {
