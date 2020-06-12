@@ -31,6 +31,13 @@ class Feed extends React.Component {
         comments.push(comment)
         this.setState({comments : comments})
       }
+
+    //   handleDelete () => {
+    //       (idx) => this.handleDelete(idx)
+    //   }
+
+
+      
     
     render() {
 
@@ -84,8 +91,9 @@ class Feed extends React.Component {
                                 </section>
                                 <section className="new-comment">
                                    {this.state.comments.map ((comment) => {
-                                       return (<p><b>joanne_jhk</b> {comment} </p>)})}
-                        
+                                       return (
+                                            <span><b>joanne_jhk</b> {comment} </span>
+                                        )})}
                                 </section>
 
                                 <section className="when-posted">
