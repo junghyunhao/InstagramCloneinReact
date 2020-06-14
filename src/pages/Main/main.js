@@ -4,7 +4,6 @@ import Header from "../.././components/Header.js";
 import Feed from "../.././components/Feed.js";
 import Rightfeed from  "../.././components/Rightfeed.js";
 
-// import gyumin from '../../images/'
 
 
 

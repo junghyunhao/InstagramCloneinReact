@@ -9,7 +9,6 @@ class Feed extends React.Component {
           comments : [],
           comment : ""
         }
-        // this.clickHandler=this.clickHandler.bind(this)
 
     }
       changeHandler = (e)  =>{
@@ -17,9 +16,9 @@ class Feed extends React.Component {
 
           this.setState ({comment : e.target.value})  
         //   if (e.keycode === 13) {
-        //     console.log("Dd")
+
         } 
-    //   }
+ 
 
       handleKeyPress = (e) => {
         e.keyCode === 13 && this.clickHandler()
@@ -36,10 +35,7 @@ class Feed extends React.Component {
     //       (idx) => this.handleDelete(idx)
     //   }
 
-
-      
-    
-    render() {
+        render() {
 
         return (
             <>
@@ -85,16 +81,19 @@ class Feed extends React.Component {
                                 </section>
 
                                 <section className="second-comment">
-                                    <p id="my-msg"><strong>joanne_jhk</strong>&nbsp;고모가 규민이 많이 사랑해~😍</p>
-                                    <p id="heart-p-tag"><button id="heart-box-in-comment"></button></p>
+                                    <p className="my-msg"><strong>joanne_jhk</strong>&nbsp;고모가 규민이 많이 사랑해~😍</p>
+                                    <p className="heart-p-tag"><button id="heart-box-in-comment"></button></p>
 
                                 </section>
-                                <section className="new-comment">
+
                                    {this.state.comments.map ((comment) => {
                                        return (
-                                            <span><b>joanne_jhk</b> {comment} </span>
+                                        <section className="new-comment">
+                                           <p className="my-msg"><strong>joanne_jhk</strong> {comment} </p>
+                                            <p className="heart-p-tag"><button id="heart-box-in-comment"></button></p>
+                                            </section>
+
                                         )})}
-                                </section>
 
                                 <section className="when-posted">
                                     <p>18분전</p>
