@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './login.css';
 import logo from '../../images/login/logo_text.png';
+import { withRouter } from 'react-router-dom';
+
 
 class Login extends Component {
   constructor() {
@@ -33,6 +35,10 @@ class Login extends Component {
     // console.log(this.state.passwordInput.length&&this.state.IDInput.includes("@"))
   }
 
+  goToSignUp () {
+    this.props.history.push('/main')
+  }
+
   render() {
 
 
@@ -48,7 +54,8 @@ class Login extends Component {
               <div className="formcontainer">
                 <input onChange={this.idChangeHandler} type="text" id="username-field" className="login-form-field" placeholder="전화번호, 사용자 이름 또는 이메일" />
                 <input onChange={this.passwordChangeHandler} type="password" id="passwsord-field" className="login-form-field" placeholder="비밀번호" />
-                <input className={this.state.ready ? "ready-to-submit" : "not-ready-to-submit"} onClick={this.clickHandler} type="submit" value="로그인" />
+                <button className={this.state.ready ? "ready-to-submit" : "not-ready-to-submit"}  onClick={this.goToSignUp.bind(this)}
+>로그인</button>
               </div>
             </form>
             <div className="linkContainer">
@@ -62,4 +69,5 @@ class Login extends Component {
 }
 
 
-export default Login;
+export default withRouter(Login);
+
