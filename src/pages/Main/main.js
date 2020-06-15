@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './main.css';
+import './main.scss';
 import Header from "../.././components/Header.js";
 import Feed from "../.././components/Feed.js";
 import Rightfeed from  "../.././components/Rightfeed.js";

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '.././pages/Main/main.css';
+import '.././pages/Main/main.scss';
 
 class Rightfeed extends Component {
     render() {

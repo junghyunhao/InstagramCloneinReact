@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './login.css';
+import './login.scss';
 import logo from '../../images/login/logo_text.png';
 import { withRouter } from 'react-router-dom';
 
@@ -44,8 +44,8 @@ class Login extends Component {
 
 
     return (
-      <div>
-        <div class="whole-box">
+      <div className="Login">
+        <div className="whole-box">
           <div className="container">
             <div id="logo-holder">
               <img src={logo} alt="instgram logo" />
@@ -59,7 +59,7 @@ class Login extends Component {
               </div>
             </form>
             <div className="linkContainer">
-              <a className="forgotPW" href="#">비밀번호를 잊으셨나요?</a>
+              <a className="forgotPW" href>비밀번호를 잊으셨나요?</a>
             </div>
           </div>
         </div>
