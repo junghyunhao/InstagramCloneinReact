@@ -28,6 +28,23 @@ class Feed extends React.Component {
         let comments = this.state.comments
         let comment = this.state.comment
         comments.push(comment)
+
+        fetch("http://10.58.63.94:8001/comments", {
+            method : "POST",
+            headers: {
+              Authorization : localStorage.getItem("access_token") 
+            },
+            body: JSON.stringify({
+             comment : this.state.comment
+            })
+          })
+          .then(res => console.log(res))
+
+
+
+
+
+
         this.setState({comments : comments})
       }
 
@@ -45,7 +62,7 @@ class Feed extends React.Component {
                             <ul className="ID-bar">
                                 <div className="ID-on-left">
                                     <li className="profile-photo"><a href><img className="profile"
-                                        src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/97060335_537162886949033_5840329827982245888_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=N0Ydf8fjaMAAX_HSRBZ&oh=27046abf6c1f1ca4b5c59194d66c8bfa&oe=5EFCB79D" />
+                                        src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/103079998_552105205462842_6862140484667697444_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=HKUDQIp0tNUAX8QN9w4&oh=1afc9b69b4dbb753e294c6a04ae70714&oe=5F16563E" />
                                     </a></li>
                                     <li><a href className="name"><b>j_ihyun0325</b></a></li>
                                 </div>
